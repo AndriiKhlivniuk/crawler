@@ -28,7 +28,10 @@ class UrlCrawl:
 
 
 	def get_all_website_links(self, url):
-
+	    # not a valid URL
+	    if not self.is_valid(url):
+	    	print("Not valid URL")
+	    	return
 	    internal_urls = set() #internal
 	    external_urls = set() #external
 	    unique_urls= set() #unique subpages
